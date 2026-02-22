@@ -1,53 +1,40 @@
-# PLC Inspection Mobile App
+# PLC Inspection App
 
-## Introduction
-The PLC Inspection Mobile App is designed to facilitate inspections of Programmable Logic Controllers (PLCs) efficiently and effectively, ensuring that all parameters are met during the inspection process.
+## Overview
+A stable mobile application for Android (and iOS-compatible) to collect measurement points during inspections. Built with Flutter, this app enables users to capture photos, record descriptions, and export inspection data.
 
-## Setup Instructions
-To set up the PLC Inspection app, follow these steps:
+## Features
+- Camera integration for photo capture
+- Automatic photo storage with predictable filenames
+- Local SQLite database for offline-first operation
+- Auto-incrementing measurement numbers
+- CSV and JSON export functionality
+- Email client integration
+- Data persistence across app restarts
+- Permission handling with user-friendly errors
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/wesellcells/PLC_Inspector.git
-   cd PLC_Inspector
-   ```
+## Installation
+1. Install Flutter: https://flutter.dev/docs/get-started/install
+2. Clone repository: git clone https://github.com/wesellcells/PLC_Inspector.git
+3. Navigate to project: cd PLC_Inspector
+4. Get dependencies: flutter pub get
+5. Run app: flutter run
 
-2. Install the required dependencies:
-   ```bash
-   npm install
-   ```
+## Project Structure
+lib/
+├── main.dart
+├── models/
+│   └── measurement.dart
+├── services/
+│   ├── database_service.dart
+│   ├── camera_service.dart
+│   ├── export_service.dart
+│   └── email_service.dart
+└── screens/
+    └── inspection_screen.dart
 
-3. Set up the environment variables. Create a `.env` file in the root directory and fill in the necessary configurations.
+## Testing Instructions
+See inline documentation for comprehensive testing checklist.
 
-4. Run the application:
-   ```bash
-   npm start
-   ```
-
-## Features List
-- Inspection Checklist
-- Real-time data entry
-- Historical data access
-- User authentication
-- Cloud synchronization
-- Notifications & Alerts
-
-## Testing Checklist
-- [ ] Ensure all features are functional
-- [ ] Test on multiple devices for compatibility
-- [ ] Validate user authentication
-- [ ] Confirm data synchronization with the cloud
-- [ ] Check for UI responsiveness
-
-## How to Run the PLC Inspection Mobile App
-You can run the app on physical devices or emulators. To do this:
-- For Android, use:
-  ```bash
-  npx react-native run-android
-  ```
-- For iOS, use:
-  ```bash
-  npx react-native run-ios
-  ```
-
-Ensure that your development environment is properly set up according to the React Native documentation.
+## License
+MIT
