@@ -85,6 +85,6 @@ class MeasurementDraft extends Measurement {
     super.priority = 'MEDIUM',
     DateTime? createdAt,
   }) : super(
-    createdAt: createdAt ?? DateTime.now(),
-  );
+          createdAt: createdAt ?? DateTime.now(),
+        );
 }
